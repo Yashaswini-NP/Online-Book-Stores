@@ -21,3 +21,65 @@ The aim of this project is to simulate an online bookstore where buyers can view
 "Since this is a backend-free project, delivery info like name, address, and mobile number is just simulated via user input. In a real system, this would be stored in a database and tracked by the seller or delivery partner."
 "Right now, this is a console-based, single-user program for demonstration. But with GUI or web development and database support, this can definitely be extended to allow multiple buyers and sellers."
 "I chose this project because it's a real-world relatable scenario — almost everyone uses online book or shopping platforms. It gave me a good opportunity to apply core Java concepts while simulating practical buying and selling operations."
+
+🔹 Main Menu Logic
+You enter an infinite loop which keeps showing the main menu options to the user.
+There are three options:
+Buyer
+Seller
+Exit
+The user is prompted to enter their choice. Based on the input, the program uses a switch-case to decide what to do.
+
+💠 Buyer Section
+If the user chooses "Buyer", a nested loop starts for the Buyer Menu.
+Here, they see three options:
+View Available Books
+Buy a Book
+Go Back to Main Menu
+
+🟢 View Available Books
+It prints a neatly formatted list of all the books.
+For each book, it shows the ID, Title, Author, Price, and how many are left in stock.
+This helps the user decide which book they want to purchase.
+
+🟢 Buy a Book
+The user is asked to enter the Book ID they want to buy.
+The program checks if that ID exists and whether the book is still in stock.
+If the book is available:
+It collects buyer details like name, phone number, and delivery address.
+Then, it prints a clear order summary and a success message.
+The stock of that book is reduced by 1.
+The number of sold copies is increased by 1.
+If the book is out of stock, it informs the user.
+If the user enters an invalid ID, an error message is shown.
+
+🟢 Back to Main Menu
+Ends the buyer loop and returns to the main menu.
+
+💠 Seller Section
+If the user chooses "Seller", they are asked to enter a password.
+If the password is correct (in this case it's hardcoded), they get access to the Seller Panel.
+The seller panel shows:
+Book ID
+Title
+Current Stock
+Total Sold
+This allows the seller to keep track of inventory and sales easily.
+If the password is wrong, access is denied.
+
+💠 Exit Option
+If the user chooses "Exit":
+A goodbye message is shown.
+The program ends gracefully by closing the scanner.
+
+✅ Program Structure Summary
+The whole logic is well-structured using loops, arrays, maps, and conditional statements.
+
+The use of HashMap helps maintain dynamic stock and sales tracking.
+
+The 2D array for books keeps data organized.
+
+Input validation and appropriate messages improve user experience.
+
+The code uses a modular menu-based system that makes it easy to navigate for both buyers and sellers.
+
